@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>TuanDimensionBelow</Name>
+    <!-- Đường dẫn tương đối: Revit 2026 phân giải theo thư mục chứa file .addin.
+         install.ps1 copy cả .addin và .dll vào cùng thư mục Addins\2026. -->
+    <Assembly>TuanDimensionBelow.dll</Assembly>
+    <AddInId>7B2E4C10-9A3D-4F52-B8E1-2C6D5F0A9E31</AddInId>
+    <FullClassName>TuanDimensionBelow.App</FullClassName>
+    <VendorId>TUAN</VendorId>
+    <VendorDescription>Tuan Custom Revit Addin</VendorDescription>
+  </AddIn>
+</RevitAddIns>
