@@ -38,8 +38,8 @@ namespace TuanDimensionBelow
                 "TuanDimensionBelow.SetBelowCommand");
 
             btnData.ToolTip =
-                "Nhập 1 đoạn text, nhấn Apply, rồi click liên tiếp vào từng dimension " +
-                "để điền text đó vào phần Below. Nhấn ESC để dừng.";
+                "Enter a text, press Apply, then click dimensions one by one " +
+                "to fill that text into the Below field. Press ESC to stop.";
 
             panel.AddItem(btnData);
 
@@ -64,7 +64,7 @@ namespace TuanDimensionBelow
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
             if (uidoc == null)
             {
-                message = "Không có tài liệu nào đang mở.";
+                message = "No active document.";
                 return Result.Cancelled;
             }
             Document doc = uidoc.Document;
@@ -88,7 +88,7 @@ namespace TuanDimensionBelow
                     pickedRef = uidoc.Selection.PickObject(
                         ObjectType.Element,
                         new DimensionSelectionFilter(),
-                        "Click vào dimension để điền Below (ESC = dừng)");
+                        "Click a dimension to fill Below (ESC = stop)");
                 }
                 catch (RvtException.OperationCanceledException)
                 {
@@ -108,7 +108,7 @@ namespace TuanDimensionBelow
             }
 
             if (count > 0)
-                TaskDialog.Show("TUAN", $"Đã điền Below cho {count} dimension.");
+                TaskDialog.Show("TUAN", $"Below filled for {count} dimension(s).");
 
             return Result.Succeeded;
         }
@@ -160,7 +160,7 @@ namespace TuanDimensionBelow
 
             Label lbl = new Label
             {
-                Text = "Nhập text cho phần Below:",
+                Text = "Enter text for the Below field:",
                 Left = 12,
                 Top = 12,
                 Width = 336

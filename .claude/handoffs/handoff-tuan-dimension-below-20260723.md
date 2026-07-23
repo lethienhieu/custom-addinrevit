@@ -21,12 +21,17 @@ Push lên repo GitHub **public** mới `custom-addinrevit`.
 - `README.md`, `.gitignore`.
 - **Build Release THÀNH CÔNG** → `bin/Release/TuanDimensionBelow.dll` (đã copy vào dist).
 
-## Đang dở
-- Đang chuẩn bị `git init` + tạo repo public `custom-addinrevit` + push (user đã cho phép).
+## Cập nhật 16:13
+- User đã **test trong Revit 2026 → chạy thành công**.
+- Đổi **toàn bộ text hiển thị sang tiếng Anh** (tooltip, dialog label/title, pick prompt,
+  TaskDialog kết quả, message "No active document"). Rebuild OK, cập nhật `dist/`.
+- Push lần 2 lên repo public `custom-addinrevit`.
+
+## Đã push
+- Repo public: https://github.com/lethienhieu/custom-addinrevit (branch master).
 
 ## Lỗi / blocker hiện tại
 - Không có. (2 lỗi build ban đầu do trùng tên `Form`/`TextBox`/`TaskDialog` đã fix bằng alias.)
-- **Chưa test trong Revit** (không có Revit chạy trong môi trường này) — cần user chạy thử thực tế.
 
 ## Bước tiếp theo
 1. Push xong → user chạy `install.ps1` → mở Revit 2026 → test tab TUAN.
